@@ -1,0 +1,46 @@
+body,
+#social ul li a,
+#menu li a.current,
+#menu li a:hover,
+#mc-embedded-subscribe-form .mc-field-group input,
+#mc-embedded-subscribe-form .row-submit .form-submit,
+#contacts_form .field-row input[type='text'],
+#contacts_form .field-row input[type='email'],
+#contacts_form .field-row textarea,
+#contacts_form .field-row .form-submit {
+	color: #fff;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #fff;
+  	opacity:  .5;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #fff;
+  	opacity:  .5;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #fff;
+  	opacity:  .5;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #fff;
+  	opacity:  .5;
+}
+.logo-trian {
+	stroke: #fff;
+}
+#sandglass .sand-half,
+#sandglass .part-top,
+.show-section:after,
+.show-section:before {
+	border-top-color: #fff;
+}
+#sandglass .sand-half + .sand-half,
+#sandglass .part-bot {
+	border-bottom-color: #fff;
+}
+.show-section,
+#mc-embedded-subscribe-form .row-submit .form-submit,
+#contacts_form .field-row .form-submit {
+	border-color: #fff;
+}

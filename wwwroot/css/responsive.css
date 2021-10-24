@@ -1,0 +1,164 @@
+/* SandGlass - Mobile Styles */
+
+
+@media (max-height: 768px) {
+	#site-header {
+		padding-top: 25px;
+	}
+	#site-logo {
+		margin-bottom: 5px;
+	}
+	#sandglass-wrap {
+		padding-bottom: 45px;
+	}
+	.content-pane .pane-inner {
+		padding: 130px 150px 50px;
+	}
+	#countdown-block {
+		position: relative;
+		top: 0;
+		margin-top: 0 !important;
+	}
+	body,
+	html {
+		min-height: 600px;
+		overflow: visible;
+	}
+}
+
+@media (max-width: 768px) {
+	.content-pane .pane-inner {
+		padding: 30px 150px 50px;
+	}
+	.sidemenu #site-header,
+	.sidemenu #countdown-block  {
+		margin-left: 0;
+	}
+	#site-logo {
+		font-size: 24px;
+		line-height: 29px;
+	}
+	.show-section {
+		top: 30px;
+		right: -50px;
+	}
+	#site-header {
+		padding-left: 75px;
+		padding-right: 75px;
+	}
+	#menu-show:not(.visible):hover {
+		top: 29px;
+		height: 23px;
+	}
+	#countdown-block {
+		position: relative;
+		margin-top: 0 !important;
+		top: 0;
+	}
+	body {
+		overflow: auto;
+	}
+	#social ul li {
+		margin-bottom: 17px;
+		width: 40px;
+	}
+	#social ul li a {
+		height: 46px;
+		font-size: 13px;
+		line-height: 45px;
+	}
+	.columns .col {
+		width: auto;
+		margin: 0 0 20px;
+		float: none;
+	}
+	.logo-trian {
+		display: none;
+	}
+	.content-pane {
+		position: relative;
+	}
+	.content-pane .pane-inner {
+		position: relative;
+	}
+	#mc-embedded-subscribe-form .mc-field-group {
+		float: none;
+		text-align: center;
+		margin-right: 0;
+	}
+	#mc-embedded-subscribe-form .mc-field-group input {
+		border-right: 1px solid rgba(255,255,255,.5);
+		display: block;
+		width: 100%;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		margin-right: 0;
+	}
+	#mc-embedded-subscribe-form .row-submit .form-submit {
+		display: inline-block;
+	}
+	#mc-embedded-subscribe-form .row-submit {
+		padding: 20px 0 0;
+		text-align: center;
+	}
+	#mc-embedded-subscribe-form {
+		max-width: 100%;
+	}
+	.content-pane .section-title {
+		font-size: 25px;
+		line-height: 30px;
+	}
+}
+@media (max-width: 480px) {
+	#site-header {
+		padding-left: 55px;
+		padding-right: 55px;
+	}
+	#social {
+		top: 0;
+		margin-top: 0 !important;
+		position: relative;
+		right: 0;
+	}
+	#social ul {
+		text-align: center;
+		padding: 25px 0;
+		overflow: hidden;
+	}
+	#social ul li {
+		display: inline-block;
+		margin: 0 5px;
+	}
+	#countdown-block {
+		padding: 0 65px;
+	}
+	#countdown .countdown-section {
+		font-size: 25px;
+		line-height: 30px;
+	}
+	.content-pane .pane-inner {
+		padding: 50px 75px;
+	}
+	#config-show {
+		display: none;
+	}
+	.show-section {
+		top: 10px;
+		right: -50px;
+	}
+	#menu-show:not(.visible):hover {
+		top: 9px;
+		height: 23px;
+	}
+	.content-pane .pane-inner {
+		padding: 50px 55px;
+	}
+	#contacts_form .form-row .half {
+		float: none;
+		width: 100%;
+		padding: 0;
+	}
+	#contacts_form .form-row .half + .half {
+		padding: 20px 0 0 0;
+	}
+}

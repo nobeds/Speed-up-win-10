@@ -1,0 +1,84 @@
+body,
+#social ul li a,
+#menu li a.current,
+#menu li a:hover,
+#mc-embedded-subscribe-form .mc-field-group input,
+#mc-embedded-subscribe-form .row-submit .form-submit,
+#contacts_form .field-row input[type='text'],
+#contacts_form .field-row input[type='email'],
+#contacts_form .field-row textarea,
+#contacts_form .field-row .form-submit {
+	color: #efdaad;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #efdaad;
+  	opacity:  .5;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #efdaad;
+  	opacity:  .5;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #efdaad;
+  	opacity:  .5;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #efdaad;
+  	opacity:  .5;
+}
+.logo-trian {
+	stroke: #efdaad;
+}
+#sandglass .sand-half,
+#sandglass .part-top,
+.show-section:after,
+.show-section:before {
+	border-top-color: #efdaad;
+}
+#sandglass .sand-half + .sand-half,
+#sandglass .part-bot {
+	border-bottom-color: #efdaad;
+}
+.show-section,
+#mc-embedded-subscribe-form .row-submit .form-submit,
+#contacts_form .field-row .form-submit {
+	border-color: #efdaad;
+}
+#social ul li:after,
+#social ul li a:after {
+  background-image: url(../../images/honey/hexagon.png);
+}
+#config-show {
+  background-image: url(../../images/honey/configurator.png);
+}
+#menu li a.current:after {
+  background-image: url(../../images/honey/menu-current.svg);
+}
+.content-pane .section-title {
+  background-image: url(../../images/honey/pane-title.svg);
+}
+.columns .col .about-icon.icon-1 {
+  background-image: url(../../images/honey/icon-about-1.png);
+}
+.columns .col .about-icon.icon-2 {
+  background-image: url(../../images/honey/icon-about-2.png);
+}
+.columns .col .about-icon.icon-3 {
+  background-image: url(../../images/honey/icon-about-3.png);
+}
+#mc-embedded-subscribe-form .mc-field-group input,
+#contacts_form .field-row input[type='text'],
+#contacts_form .field-row input[type='email'],
+#contacts_form .field-row textarea,
+#contacts_form .field-row .form-submit:hover {
+  border-color: rgba(212, 187, 123, .5);
+}
+#mc-embedded-subscribe-form .row-submit .form-submit:hover {
+  border-color: rgba(212, 187, 123, .5);
+}
+#contacts_form .field-row .form-submit:hover {
+  background: rgba(212, 187, 123, .1);
+}
+#single-img {
+  background-image: url(../../images/bg-slide4.jpg);
+}

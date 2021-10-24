@@ -1,10 +1,238 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+	ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<header id="site-header">
+    <h1 id="site-logo">
+        Speed up Win 10
+        <svg class="left-trian logo-trian" height="12" width="12"><polygon points="5,0 0,10 10,10" /></svg>
+        <svg class="right-trian logo-trian" height="12" width="12"><polygon points="5,0 0,10 10,10" /></svg>
+    </h1>
+
+    <h2 id="site-headline">Please select what you want to tweak and run your batch as Admin</h2>
+
+</header>
+	
+	<section id="countdown-block">
+		
+		<div class="container pt-0" id="sandglass-wrap">
+			<div id="sandglass">
+				<div class="sand-half">
+					<div class="part-top sand-part"></div>
+				</div>
+				<div class="m-2">
+					<ul id="menu" class="p-1">
+						<li><a href="#subscr" class="btn btn-warning">Select options</a></li>
+					</ul>
+				</div>
+				<div class="sand-half">
+					<div class="part-bot sand-part"></div>
+				</div>
+			</div>
+		</div>
+		<h3 id="countdown-label">Don't wait windows can be much faster</h3>
+		<div id="countdown"></div>
+		
+	</section>
+	
+	<aside id="social">
+		<ul class="social-links">
+			<li><a href="#"><i class="icon-facebook"></i></a></li>
+			<li><a href="#"><i class="icon-twitter"></i></a></li>
+			<li><a href="#"><i class="icon-gplus-1"></i></a></li>
+			<li><a href="#"><i class="icon-linkedin"></i></a></li>
+			<li><a href="#"><i class="icon-rocket"></i></a></li>
+		</ul>
+	</aside>
+	
+	<aside id="side-menu">
+		<a href="#" id="menu-show" class="show-section"></a>
+		<!-- Site Main Menu -->
+		<ul id="menu">
+			<li><a href="#" class="current">Home</a></li>
+			<li><a href="#subscr">Options</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#contact">Contact</a></li>
+		</ul>
+	</aside>
+	
+	<aside id="configurator">
+		<a href="#" id="config-show" class="show-section"></a>
+		<div class="aside-inner">
+		
+			<h2 class="aside-title">Choose<br>Color Style:</h2>
+			<ul class="color-schemes" id="color-schemes">
+				<li>
+					<a href="#fff">
+						<span class="color-triangle white"></span>
+						<span class="color-label">White</span>
+					</a>
+				</li>
+				<li>
+					<a href="#aae2ef">
+						<span class="color-triangle aqua"></span>
+						<span class="color-label">Aqua</span>
+					</a>
+				</li>
+				<li>
+					<a href="#eeaaab">
+						<span class="color-triangle pink"></span>
+						<span class="color-label">Pink</span>
+					</a>
+				</li>
+				<li>
+					<a href="#8badda">
+						<span class="color-triangle blue"></span>
+						<span class="color-label">Blue</span>
+					</a>
+				</li>
+				<li>
+					<a href="#ddaaef">
+						<span class="color-triangle flower"></span>
+						<span class="color-label">Flower</span>
+					</a>
+				</li>
+				<li>
+					<a href="#d4bb7b">
+						<span class="color-triangle honey"></span>
+						<span class="color-label">Honey</span>
+					</a>
+				</li>
+			</ul>
+
+		</div>
+	</aside>
+	
+	<div id="site-content">
+		<!-- Subscribe Section -->
+		<section id="subscr" class="content-pane">
+			<div class="pane-inner">
+				<h1 class="section-title anim">Options</h1>
+				<h4 class="pane-subtitle anim">Select options and click download</h4>
+				<div class="subscr-form-wrap">
+					<div class="row">
+								<div class="col-lg-4">
+									<h2>Hide Win 10 features</h2>
+									<h3>Soon</h3>
+								</div>
+								<div class="col-lg-4">
+									<form method="post" style="text-align: left; float: left">
+										<h2>Disable Win 10 features</h2>
+										<div class="form-check mt-3 mb-3">
+											<input class="form-check-input" type="checkbox" id="all">
+											<label class="form-check-label" for="all">
+												Select all
+											</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="disable_win_updates">
+											<label class="form-check-label" for="disable_win_updates">Disable Win updates</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="disable_app_updates">
+											<label class="form-check-label" for="disable_app_updates">Disable Apps updates</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="disable_cortana">
+											<label class="form-check-label" for="disable_cortana">Disable cortana</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="disable_telemetry">
+											<label class="form-check-label" for="disable_telemetry">Disable telemetry</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="2">
+											<label class="form-check-label" for="2">Disable Antimalware service</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="3">
+											<label class="form-check-label" for="3">Disable One drive</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="4">
+											<label class="form-check-label" for="4">Disable Defender</label>
+										</div>
+										<div>
+											<button class="btn btn-success" type="submit">Download</button>
+										</div>
+										
+									</form>
+								</div>
+								<div class="col-lg-4">
+									<h2>Enable Win 10 features</h2>
+									<h3>Soon</h3>
+								</div>
+						</div>
+					<script>
+						document.addEventListener("DOMContentLoaded", function(event) {
+							$("#all").click(function(){
+								$('input:checkbox').not(this).prop('checked', this.checked);
+							});
+						});
+					</script>
+				</div>
+			</div>
+		</section>
+		
+		<!-- About Section -->
+		<section id="about" class="content-pane">
+			<div class="pane-inner">
+				<h1 class="section-title anim">About</h1>
+				
+				<div class="content anim">
+					Welcome to Speed up Windows 10 Page. It contains plenty of usefull comands how to speed up your windows 10 operating system. You can select any options you want and increase speed of your windows 10. 
+					Please help us to grow our project with shares and we will add more awesome code here :)
+				</div>
+				
+				<div class="columns anim">
+					<div class="col">
+						<i class="about-icon icon-1"></i>
+						<h3 class="about-title">quickly to configure</h3>
+					</div>
+					<div class="col">
+						<i class="about-icon icon-2"></i>
+						<h3 class="about-title">6 different options</h3>
+					</div>
+					<div class="col">
+						<a href="https://github.com/itbank/Speed-up-win-10">
+							<i class="about-icon icon-3"></i>
+							<h3 class="about-title">Find us on GitHub</h3>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- Contacts Section -->
+		<section id="contact" class="content-pane">
+			<div class="pane-inner">
+				<h1 class="section-title anim">contact</h1>
+				<h4 class="pane-subtitle anim">If you have questions write to us!</h4>
+				
+				<form id='contacts_form' action="#" class="contact-list anim">
+					<div class="form-row">
+						<div class="field-row anims half">
+							<input class="form_item" type="text" placeholder="Name" id="name" name="name" />
+						</div>
+						<div class="field-row anims half">
+							<input class="form_item" type="email" placeholder="E-mail" id="email" name="email" />
+						</div>
+					</div>
+					<div class="field-row row-textarea anims">
+						<textarea class="form_item" id="message" placeholder="Message" name="message"></textarea>
+					</div>
+					<div class="field-row row-submit anims">
+						<button class="form-submit">Send Message<i class="icon-spin2 animate-spin"></i></button>
+					</div>
+					<div class="form_results"></div>
+				</form>
+			</div>
+		</section>
+	</div>
+	
+	<div id="gradient" class="main-bg"></div>
+	
+	<!-- Preloader -->
+	<div id="preloader"></div>
