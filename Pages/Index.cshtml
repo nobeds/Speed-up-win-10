@@ -11,7 +11,7 @@
         <svg class="right-trian logo-trian" height="12" width="12"><polygon points="5,0 0,10 10,10" /></svg>
     </h1>
 
-    <h2 id="site-headline">Please select what you want to tweak and run your batch as Admin</h2>
+    <h2 id="site-headline">Please select what you want to tweak and run your batch</h2>
 
 </header>
 	
@@ -113,57 +113,79 @@
 				<h4 class="pane-subtitle anim">Select options and click download</h4>
 				<div class="subscr-form-wrap">
 					<div class="row">
-								<div class="col-lg-4">
-									<h2>Hide Win 10 features</h2>
-									<h3>Soon</h3>
+								<div class="col-lg-6">
+                                    <form method="post" style="text-align: left; float: left">
+                                        <h2>Disable Win 10 features</h2>
+                                        <div class="form-check mt-3 mb-3">
+                                            <input class="form-check-input" type="checkbox" id="all">
+                                            <label class="form-check-label" for="all">
+                                                Select all
+                                            </label>
+                                        </div>
+										<div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="windows_optimization">
+                                            <label class="form-check-label" for="windows_optimization">Windows optimization</label>
+                                        </div>
+										<div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="policies_optimization">
+                                            <label class="form-check-label" for="policies_optimization">Policies optimization</label>
+                                        </div>
+										<div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="disable_windows_logging">
+                                            <label class="form-check-label" for="disable_windows_logging">Disable Windows logging</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="disable_win_updates">
+                                            <label class="form-check-label" for="disable_win_updates">Disable Win updates</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="disable_app_updates">
+                                            <label class="form-check-label" for="disable_app_updates">Disable Apps updates</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="disable_cortana">
+                                            <label class="form-check-label" for="disable_cortana">Disable cortana</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="disable_telemetry">
+                                            <label class="form-check-label" for="disable_telemetry">Disable telemetry</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="disable_defender">
+                                            <label class="form-check-label" for="disable_defender">Disable Defender</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="disable_onedrive">
+                                            <label class="form-check-label" for="disable_onedrive">Disable One drive</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="disable_services">
+                                            <label class="form-check-label" for="disable_services">Disable Services</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="disable_search">
+                                            <label class="form-check-label" for="disable_search">Disable Search</label>
+                                        </div>
+										<div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="disable_error_reporting">
+                                            <label class="form-check-label" for="disable_error_reporting">Disable error reporting</label>
+                                        </div>
+                                        <div>
+                                            <button class="btn btn-success" type="submit">Download</button>
+                                        </div>
+                                    </form>
 								</div>
-								<div class="col-lg-4">
-									<form method="post" style="text-align: left; float: left">
-										<h2>Disable Win 10 features</h2>
-										<div class="form-check mt-3 mb-3">
-											<input class="form-check-input" type="checkbox" id="all">
-											<label class="form-check-label" for="all">
-												Select all
-											</label>
-										</div>
-										<div class="form-check">
-											<input class="form-check-input" type="checkbox" name="disable_win_updates">
-											<label class="form-check-label" for="disable_win_updates">Disable Win updates</label>
-										</div>
-										<div class="form-check">
-											<input class="form-check-input" type="checkbox" name="disable_app_updates">
-											<label class="form-check-label" for="disable_app_updates">Disable Apps updates</label>
-										</div>
-										<div class="form-check">
-											<input class="form-check-input" type="checkbox" name="disable_cortana">
-											<label class="form-check-label" for="disable_cortana">Disable cortana</label>
-										</div>
-										<div class="form-check">
-											<input class="form-check-input" type="checkbox" name="disable_telemetry">
-											<label class="form-check-label" for="disable_telemetry">Disable telemetry</label>
-										</div>
-										<div class="form-check">
-											<input class="form-check-input" type="checkbox" name="2">
-											<label class="form-check-label" for="2">Disable Antimalware service</label>
-										</div>
-										<div class="form-check">
-											<input class="form-check-input" type="checkbox" name="3">
-											<label class="form-check-label" for="3">Disable One drive</label>
-										</div>
-										<div class="form-check">
-											<input class="form-check-input" type="checkbox" name="4">
-											<label class="form-check-label" for="4">Disable Defender</label>
-										</div>
+								@*<div class="col-lg-6">
+									<h2>Script result</h2>
+									<h3>Soon</h3>
+									@ViewData["batch"]
+									<form method="put" style="text-align: left; float: left">
+										<input name="batch" value="@ViewData["batch"]" hidden />
 										<div>
-											<button class="btn btn-success" type="submit">Download</button>
-										</div>
-										
+                                            <button class="btn btn-success" type="submit">Download</button>
+                                        </div>
 									</form>
-								</div>
-								<div class="col-lg-4">
-									<h2>Enable Win 10 features</h2>
-									<h3>Soon</h3>
-								</div>
+								</div>*@
 						</div>
 					<script>
 						document.addEventListener("DOMContentLoaded", function(event) {
