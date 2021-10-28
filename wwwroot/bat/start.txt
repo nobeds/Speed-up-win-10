@@ -1,0 +1,2 @@
+@Echo off
+echo Starting Speed up win 10
