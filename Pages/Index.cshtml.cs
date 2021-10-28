@@ -7,47 +7,37 @@ namespace Speed_up_win_10.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
+        public string script { get; set; }
 
-        public IndexModel(ILogger<IndexModel> logger)
-        {
-            _logger = logger;
-        }
+        public string batch { get; set; }
+
 
         public void OnGet()
         {
-
+            
         }
-        public string batch { get; set; }
-        public string script { get; set; }
 
-        public ActionResult OnPost(IFormCollection form)
+        public void OnPost(IFormCollection form)
         {
+            ViewData["batch"] = "";
+            script = System.IO.File.ReadAllText("wwwroot/bat/start.bat");
+            batch += script + Environment.NewLine;
 
-            if (form != null)
+            foreach (var key in form.Keys)
             {
-                script = System.IO.File.ReadAllText("wwwroot/bat/start.bat");
-                batch += script + Environment.NewLine;
-
-                foreach (var key in form.Keys)
+                if (form[key.ToString()] == "on")
                 {
-                    if (form[key.ToString()] == "on")
-                    {
-                        script = System.IO.File.ReadAllText("wwwroot/bat/" + key.ToString() + ".bat");
-                        batch += script + Environment.NewLine;
-                    }
+                    script = System.IO.File.ReadAllText("wwwroot/bat/" + key.ToString() + ".bat");
+                    batch += script + Environment.NewLine;
                 }
-                                
             }
 
-            batch += "echo ##############################################" + Environment.NewLine;
-            batch += "pause" + Environment.NewLine;
+            script = System.IO.File.ReadAllText("wwwroot/bat/finish.bat");
+            batch += script + Environment.NewLine;
 
-            var contentType = "text/plain";
-            var bytes = Encoding.UTF8.GetBytes(batch);
-            var result = new FileContentResult(bytes, contentType);
-            result.FileDownloadName = "speedup-win-10.bat";
-            return result;
+            ViewData["batch"] = batch;
         }
+
+        
     }
 }

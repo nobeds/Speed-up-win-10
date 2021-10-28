@@ -11,7 +11,7 @@
         <svg class="right-trian logo-trian" height="12" width="12"><polygon points="5,0 0,10 10,10" /></svg>
     </h1>
 
-    <h2 id="site-headline">Please select what you want to tweak and run your batch</h2>
+    <h2 id="site-headline">Please select what you want to speed up and run your batch</h2>
 
 </header>
 	
@@ -24,7 +24,20 @@
 				</div>
 				<div class="m-2">
 					<ul id="menu" class="p-1">
-						<li><a href="#subscr" class="btn btn-warning">Select options</a></li>
+
+						@if(ViewData["batch"] != null && ViewData["batch"].ToString() != ""){
+							<li>
+								<form method="post" >
+									<textarea  name="batch" hidden>@ViewData["batch"]</textarea>
+									<button type="submit" formaction="Download" class="btn btn-success">Download</button>
+								</form>
+							</li>
+						}
+						else {
+							<li>
+								<a href="#subscr" class="btn btn-warning">Select speed up options</a>
+							</li>
+						}
 					</ul>
 				</div>
 				<div class="sand-half">
@@ -110,7 +123,7 @@
 		<section id="subscr" class="content-pane">
 			<div class="pane-inner">
 				<h1 class="section-title anim">Options</h1>
-				<h4 class="pane-subtitle anim">Select options and click download</h4>
+				<h4 class="pane-subtitle anim">Select options and click generate</h4>
 				<div class="subscr-form-wrap">
 					<div class="row">
 								<div class="col-lg-6">
@@ -171,21 +184,10 @@
                                             <label class="form-check-label" for="disable_error_reporting">Disable error reporting</label>
                                         </div>
                                         <div>
-                                            <button class="btn btn-success" type="submit">Download</button>
+                                            <button class="btn btn-success" type="submit">Generate</button>
                                         </div>
                                     </form>
 								</div>
-								@*<div class="col-lg-6">
-									<h2>Script result</h2>
-									<h3>Soon</h3>
-									@ViewData["batch"]
-									<form method="put" style="text-align: left; float: left">
-										<input name="batch" value="@ViewData["batch"]" hidden />
-										<div>
-                                            <button class="btn btn-success" type="submit">Download</button>
-                                        </div>
-									</form>
-								</div>*@
 						</div>
 					<script>
 						document.addEventListener("DOMContentLoaded", function(event) {
@@ -254,7 +256,7 @@
 		</section>
 	</div>
 	
-	<div id="gradient" class="main-bg"></div>
+	<div id="gradient" class="main-bg"><pre class="text-warning small">@ViewData["batch"]</pre></div>
 	
 	<!-- Preloader -->
 	<div id="preloader"></div>

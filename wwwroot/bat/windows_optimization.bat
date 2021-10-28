@@ -65,3 +65,12 @@ reg add "HKLM\System\CurrentControlSet\Control\Session Manager\Power" /v "Hiberb
 
 rem Disable Hibernation / Disable Fast Startup (Hybrid Boot)
 powercfg -h off
+
+rem Delete Temp files
+del /s /f /q %userprofile%\Recent\*.*
+
+del /s /f /q C:\Windows\Prefetch\*.*
+
+del /s /f /q C:\Windows\Temp\*.*
+
+del /s /f /q %USERPROFILE%\appdata\local\temp\*.*
